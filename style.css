@@ -1,3 +1,4 @@
+/* Base Styles */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -10,22 +11,29 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  padding: 20px;
+  gap: 30px;
+  flex-wrap: wrap;
 }
 
 .left-panel {
   flex: 1;
+  min-width: 300px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .mockup-image {
-  width: 380px;
-  max-width: 100%;
+  width: 100%;
+  max-width: 400px;
+  height: auto;
 }
 
 .right-panel {
   flex: 1;
+  min-width: 300px;
+  max-width: 400px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -37,7 +45,6 @@ body {
   padding: 40px;
   border-radius: 8px;
   width: 100%;
-  max-width: 350px;
   text-align: center;
 }
 
@@ -112,4 +119,22 @@ body {
   color: #8e8e8e;
   text-decoration: none;
   margin: 0 5px;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    height: auto;
+    padding-top: 40px;
+  }
+
+  .left-panel {
+    order: 2;
+    margin-top: 30px;
+  }
+
+  .right-panel {
+    order: 1;
+  }
 }
